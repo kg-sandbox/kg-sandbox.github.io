@@ -39,94 +39,41 @@
     <div class="p-2 w-100 text-center">
       <h1>Welcome to the Kepler Pixel Implementation Sandbox</h1>
       <h2>(Don't worry, there's nothing important on this site to worry about breaking while you test out tagging. Sometimes breaking things is the best way to learn how to fix them.)</h2>
+      <br>
     </div>
     <div class="d-flex flex-row">
-      <div class="p-2 w-100 text-center">
+      <div class="p-5 w-100 text-center">
         <div class="d-flex flex-column">
-          <h3>On this site, we've added a user indentifying first-party cookie called "KG_Sandbox_ID"</h3>
-          <div>We keep this cookie stored in your browser for 30 days, so if you come back from the same browser as before, and haven't cleared your cookies, we'll keep using the same ID.</div>
-          <div>For your browser, we've assigned:</div>
+          <h3>Getting started on this site:</h3>
+          <br>
+          <div>There are two basic components to this site:
+            <ol>
+              <li><strong>Example pages - </strong>These are most of the pages on the site, including the product page, product detail pages, cart, and confirmation page. This is where you should be practicing your pixel implementation.</li>
+              <br>
+              <li><strong>Help page - </strong>This page will include more information about the site, practice problems, prompts, sitemap files, and more. <a href="/help.html">Click here</a> or clicking the Help button on the top menu. You can always return to that page at any time to check back in from the menu button.</li>
+            </ol>
+          </div>
+          <div>Don't hesitate to reach out to the Pixel COE on Slack (#pixels) if you have any questions!</div>
+        </div>
+      </div>
+      <div class="p-5 w-100 text-center">
+        <div class="d-flex flex-column">
+          <h3>Tracking Implementation Explanation:</h3>
+          <br>
+          <div><strong>On this site, we've added a user indentifying first-party cookie called "KG_Sandbox_ID." We log site interactions in database (Google Sheet) to help show how identifiers and actions can be used for audience segmentation. Don't worry, we don't have any way to figure out "who" is tied to an ID.</strong></div>
+          <br>
+          <div>For your browser, we've assigned the ID:</div>
           <h3 id="KG_Sandbox_ID_Field"></h3>
           <script type="text/javascript">
             var KG_Sandbox_ID_Response = getCookie("KG_Sandbox_ID")
             console.log(KG_Sandbox_ID_Response)
             document.getElementById("KG_Sandbox_ID_Field").innerHTML = KG_Sandbox_ID_Response;
           </script>
-          <div class="p-2 w-100 text-center">
-            <strong><div>Mug - Grey</div></strong>
-            <div class="d-flex flex-row">
-              <div class="p-2 w-100 text-center">
-                <img src="../img/12345-grey.jpg" alt="" height="100px">
-              </div>
-              <div class="p-2 w-100 text-center">
-                <div>Quantity: 3</div>
-                <div>Price: $5.00</div>
-                <div>Subtotal: $15.00</div>
-              </div>
-            </div>
-          </div>
+          <br>
+          <div>We keep this cookie stored in your browser for 30 days, so if you come back from the same browser and haven't cleared your cookies, we'll keep using the same ID.</div>
+          <br>
+          <div>If this is the first time you've visited, you're "undefined," but we just set a new cookie with a unique(ish) number in your browser's storage. If you refresh your page, or whenever you return for the next 30 days, you'll see your browser's identifier below.</div>
         </div>
-      </div>
-
-      <div class="p-2 w-100 text-center">
-        <h2>Checkout</h2>
-        <div class="d-flex flex-column">
-          <div class="p-2 w-100 text-center">
-            <div class="d-flex flex-row">
-              <div class="p-2 w-100 text-center">
-                Subtotal
-              </div>
-              <div class="p-2 w-100 text-center">
-                $230.00
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="d-flex flex-column">
-          <div class="p-2 w-100 text-center">
-            <div class="d-flex flex-row">
-              <div class="p-2 w-100 text-center">
-                Shipping
-              </div>
-              <div class="p-2 w-100 text-center">
-                $14.99
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="d-flex flex-column">
-          <div class="p-2 w-100 text-center">
-            <div class="d-flex flex-row">
-              <div class="p-2 w-100 text-center">
-                Tax
-              </div>
-              <div class="p-2 w-100 text-center">
-                $12.25
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-
-        <div class="d-flex flex-column">
-          <div class="p-2 w-100 text-center">
-            <div class="d-flex flex-row">
-              <div class="p-2 w-100 text-center">
-                <strong>Total</strong>
-              </div>
-              <div class="p-2 w-100 text-center">
-                <strong>$257.24</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-        <a onclick="placeOrder();" href="thank-you.html">
-          <button type="button" name="button" action="purchase" style="font-size:24px;">Place Your Order</button>
-        </a>
-
       </div>
     </div>
   </body>
