@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script type="text/javascript">
       function addtocartalert(prod_id,prod_sku,prod_price) {
-        alert("You added the following product to your cart!\nProduct Id: "+prod_id+",\nProduct SKU: "+prod_sku+",\nProduct Price: "+prod_price);
+        alert("You added the following product to your cart!\nProduct Id: "+prod_id+",\nProduct SKU: "+prod_sku+",\nProduct Price: "+prod_price+"\n\nAfter you close this dialog box, you can check if any additional tags fired.");
       }
     </script>
 
@@ -40,7 +40,7 @@
     </div>
     <div class="d-flex flex-row">
       <div class="p-2 w-100 text-center">
-        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRaoK0Lsezvmsk88aVJgtwWz6M5RMzNvPIpVfbZiQESuilHRKkYiCrVIvhuROFufeWRT3rzq9YteaHmduU6tZAJUIDRfzzKfqqw0WKY9LSDRbd6LAHne5KxQw&usqp=CAc" alt="" width="80%">
+        <img src="../img/12345.jpg" alt="" width="100%">
       </div>
       <div class="p-2 w-100 text-center">
         <h2>Product Information</h2>
@@ -52,17 +52,17 @@
           <strong>Product Id:</strong> 12345
         </div>
         <br>
-        <strong><div>Grey Mug: $5</div></strong>
-        <button type="button" name="button" action="addtocart" prod_id="12345" prod_sku="12345-grey" prod_price=5 onclick="addtocartalert(this.getAttribute('prod_id'), this.getAttribute('prod_sku'), this.getAttribute('prod_price'));">Add a Grey Mug to your cart</button>
+        <strong><div>Grey Mug: $11</div></strong>
+        <button type="button" name="button" action="addtocart" prod_id="12345" prod_sku="12345-grey" prod_price=11 onclick="addtocartalert(this.getAttribute('prod_id'), this.getAttribute('prod_sku'), this.getAttribute('prod_price'));">Add a Grey Mug to your cart</button>
         <br>
         <br>
-        <strong><div>Orange Mug: $6</div></strong>
-        <button type="button" name="button" action="addtocart" prod_id="12345" prod_sku="12345-orange" prod_price=6 onclick="addtocartalert(this.getAttribute('prod_id'), this.getAttribute('prod_sku'), this.getAttribute('prod_price'));">Add an Orange Mug to your cart</button>
+        <strong><div>Purple Mug: $16</div></strong>
+        <button type="button" name="button" action="addtocart" prod_id="12345" prod_sku="12345-purple" prod_price=16 onclick="addtocartalert(this.getAttribute('prod_id'), this.getAttribute('prod_sku'), this.getAttribute('prod_price'));">Add a Purple Mug to your cart</button>
         <br>
         <br>
-        <strong><div>Black Mug: $7</div></strong>
-        <button type="button" name="button" action="addtocart" prod_id="12345" prod_sku="12345-black" prod_price=7 onclick="addtocartalert(this.getAttribute('prod_id'), this.getAttribute('prod_sku'), this.getAttribute('prod_price'));">Add a Black Mug to your cart</button>
+        <strong><div>White Mug: $10</div></strong>
+        <button type="button" name="button" action="addtocart" prod_id="12345" prod_sku="12345-white" prod_price=10 onclick="addtocartalert(this.getAttribute('prod_id'), this.getAttribute('prod_sku'), this.getAttribute('prod_price'));">Add a White Mug to your cart</button>
       </div>
-
+    </div>
   </body>
 </html>

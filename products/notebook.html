@@ -11,6 +11,11 @@
     })(window,document,'script','dataLayer','GTM-P6VW68M');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript">
+      function addtocartalert(prod_id,prod_sku,prod_price) {
+        alert("You added the following product to your cart!\nProduct Id: "+prod_id+",\nProduct SKU: "+prod_sku+",\nProduct Price: "+prod_price+"\n\nAfter you close this dialog box, you can check if any additional tags fired.");
+      }
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -34,7 +39,7 @@
     </div>
     <div class="d-flex flex-row">
       <div class="p-2 w-100 text-center">
-        <img src="https://www.staples-3p.com/s7/is/image/Staples/sp38165458_sc7?wid=512&hei=512" alt="" width="80%">
+        <img src="../img/34567.jpg" alt="" width="100%">
       </div>
       <div class="p-2 w-100 text-center">
         <h2>Product Information</h2>
@@ -46,13 +51,17 @@
           <strong>Product Id:</strong> 34567
         </div>
         <br>
-        <button type="button" name="button">Add a Grey Notebook to your cart</button>
+        <strong><div>Red Notebook: $4</div></strong>
+        <button type="button" name="button" action="addtocart" prod_id="34567" prod_sku="34567-red" prod_price=4 onclick="addtocartalert(this.getAttribute('prod_id'), this.getAttribute('prod_sku'), this.getAttribute('prod_price'));">Add a Red Notebook to your cart</button>
         <br>
         <br>
-        <button type="button" name="button">Add an Orange Notebook to your cart</button>
+        <strong><div>Blue Notebook: $3</div></strong>
+        <button type="button" name="button" action="addtocart" prod_id="34567" prod_sku="34567-blue" prod_price=3 onclick="addtocartalert(this.getAttribute('prod_id'), this.getAttribute('prod_sku'), this.getAttribute('prod_price'));">Add a Blue Notebook to your cart</button>
         <br>
         <br>
-        <button type="button" name="button">Add a Black Notebook to your cart</button>
+        <strong><div>Green Notebook: $5</div></strong>
+        <button type="button" name="button" action="addtocart" prod_id="34567" prod_sku="34567-green" prod_price=5 onclick="addtocartalert(this.getAttribute('prod_id'), this.getAttribute('prod_sku'), this.getAttribute('prod_price'));">Add a Green Notebook to your cart</button>
       </div>
+    </div>
   </body>
 </html>
