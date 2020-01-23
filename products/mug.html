@@ -14,7 +14,22 @@
     <script type="text/javascript">
       function addtocartalert(prod_id,prod_sku,prod_price) {
         alert("You added the following product to your cart!\nProduct Id: "+prod_id+",\nProduct SKU: "+prod_sku+",\nProduct Price: "+prod_price+"\n\nAfter you close this dialog box, you can check if any additional tags fired.");
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'addToCart',
+          'productSku': prod_sku,
+          'productPrice': Number(prod_price)
+        });
       }
+    </script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        'event': 'productView',
+        'productId': '12345',
+        'productMinimumPrice': 10,
+        'productMaximumPrice': 16
+      });
     </script>
 
   </head>

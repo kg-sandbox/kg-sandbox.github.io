@@ -3,6 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>KG Sandbox | Confirmation Page</title>
+    <script type="text/javascript">
+      function placeOrder() {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+          'event': 'orderConfirmation',
+          'transactionId': '718324650103',
+          'transactionTotal': 230,
+          'transactionTax': 12.25,
+          'transactionShipping': 14.99,
+          'transactionProducts': [{
+            'sku': '12345-grey',
+            'name': 'Grey Mug',
+            'category': 'Home',
+            'price': 5,
+            'quantity': 3
+          },{
+            'sku': '67890-sequin',
+            'name': 'Sequin Shirt',
+            'category': 'Apparel',
+            'price': 29,
+            'quantity': 4
+          },{
+            'sku': '67890-tiedye',
+            'name': 'Tie Dye Shirt',
+            'category': 'Apparel',
+            'price': 26,
+            'quantity': 3
+          },{
+            'sku': '34567-blue',
+            'name': 'Blue Notebook',
+            'category': 'Office Supplies',
+            'price': 3,
+            'quantity': 7
+          }]
+        });
+      }
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -29,6 +66,128 @@
         <a class="py-2 d-none d-md-inline-block" href="/help/instructions.html">Help</a>
       </div>
     </nav>
-    <h1>Thanks for buying something!</h1>
+    <div class="p-2 w-100 text-center">
+      <h1>Your order is confirmed. Thanks for purchasing!</h1>
+    </div>
+    <div class="d-flex flex-row">
+      <div class="p-2 w-100 text-center">
+        <div class="d-flex flex-column">
+          <h2>Your Products</h2>
+          <div class="p-2 w-100 text-center">
+            <strong><div>Mug - Grey</div></strong>
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <img src="../img/12345-grey.jpg" alt="" height="100px">
+              </div>
+              <div class="p-2 w-100 text-center">
+                <div>Quantity: 3</div>
+                <div>Price: $5.00</div>
+                <div>Subtotal: $15.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 w-100 text-center">
+            <strong><div>Shirt - Sequin</div></strong>
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <img src="../img/67890-sequin.jpg" alt="" height="100px">
+              </div>
+              <div class="p-2 w-100 text-center">
+                <div>Quantity: 4</div>
+                <div>Price: $29.00</div>
+                <div>Subtotal: $116.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 w-100 text-center">
+            <strong><div>Shirt - Tie Dye</div></strong>
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <img src="../img/67890-tiedye.jpg" alt="" height="100px">
+              </div>
+              <div class="p-2 w-100 text-center">
+                <div>Quantity: 3</div>
+                <div>Price: $26.00</div>
+                <div>Subtotal: $78.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 w-100 text-center">
+            <strong><div>Notebook - Blue</div></strong>
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <img src="../img/34567-blue.jpg" alt="" height="100px">
+              </div>
+              <div class="p-2 w-100 text-center">
+                <div>Quantity: 7</div>
+                <div>Price: $3.00</div>
+                <div>Subtotal: $21.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-2 w-100 text-center">
+        <h2>Checkout</h2>
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                Subtotal
+              </div>
+              <div class="p-2 w-100 text-center">
+                $230.00
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                Shipping
+              </div>
+              <div class="p-2 w-100 text-center">
+                $14.99
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                Tax
+              </div>
+              <div class="p-2 w-100 text-center">
+                $12.25
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <strong>Total</strong>
+              </div>
+              <div class="p-2 w-100 text-center">
+                <strong>$257.24</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <a href="../index.html">
+          <button type="button" name="button" action="purchase" style="font-size:24px;">Go Back to the Homepage</button>
+        </a>
+
+      </div>
+    </div>
   </body>
 </html>
