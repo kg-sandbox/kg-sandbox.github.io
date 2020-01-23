@@ -17,9 +17,6 @@
         var parts = value.split("; " + name + "=");
         if (parts.length == 2) return parts.pop().split(";").shift();
       }
-      var KG_Sandbox_ID_Response = getCookie("KG_Sandbox_ID")
-      console.log(KG_Sandbox_ID_Response)
-      document.getElementById("KG_Sandbox_ID_Field").innerHTML = KG_Sandbox_ID_Response;
     </script>
   </head>
   <body>
@@ -50,6 +47,11 @@
           <div>We keep this cookie stored in your browser for 30 days, so if you come back from the same browser as before, and haven't cleared your cookies, we'll keep using the same ID.</div>
           <div>For your browser, we've assigned:</div>
           <h3 id="KG_Sandbox_ID_Field"></h3>
+          <script type="text/javascript">
+            var KG_Sandbox_ID_Response = getCookie("KG_Sandbox_ID")
+            console.log(KG_Sandbox_ID_Response)
+            document.getElementById("KG_Sandbox_ID_Field").innerHTML = KG_Sandbox_ID_Response;
+          </script>
           <div class="p-2 w-100 text-center">
             <strong><div>Mug - Grey</div></strong>
             <div class="d-flex flex-row">
