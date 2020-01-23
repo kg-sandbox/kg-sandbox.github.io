@@ -11,6 +11,16 @@
     })(window,document,'script','dataLayer','GTM-P6VW68M');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript">
+      function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+      }
+      var KG_Sandbox_ID_Response = getCookie("KG_Sandbox_ID")
+      console.log(KG_Sandbox_ID_Response)
+      document.getElementById("KG_Sandbox_ID_Field").innerHTML = KG_Sandbox_ID_Response;
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -29,7 +39,93 @@
         <a class="py-2 d-none d-md-inline-block" href="/help/instructions.html">Help</a>
       </div>
     </nav>
-    <h1>Welcome to the Kepler Pixel Sandbox</h1>
-    <p>Add homepage like information</p>
+    <div class="p-2 w-100 text-center">
+      <h1>Welcome to the Kepler Pixel Implementation Sandbox</h1>
+      <h2>(Don't worry, there's nothing important on this site to worry about breaking while you test out tagging. Sometimes breaking things is the best way to learn how to fix them.)</h2>
+    </div>
+    <div class="d-flex flex-row">
+      <div class="p-2 w-100 text-center">
+        <div class="d-flex flex-column">
+          <h3>On this site, we've added a user indentifying first-party cookie called "KG_Sandbox_ID"</h3>
+          <div>We keep this cookie stored in your browser for 30 days, so if you come back from the same browser as before, and haven't cleared your cookies, we'll keep using the same ID.</div>
+          <div>For your browser, we've assigned:</div>
+          <h3 id="KG_Sandbox_ID_Field"></h3>
+          <div class="p-2 w-100 text-center">
+            <strong><div>Mug - Grey</div></strong>
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <img src="../img/12345-grey.jpg" alt="" height="100px">
+              </div>
+              <div class="p-2 w-100 text-center">
+                <div>Quantity: 3</div>
+                <div>Price: $5.00</div>
+                <div>Subtotal: $15.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-2 w-100 text-center">
+        <h2>Checkout</h2>
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                Subtotal
+              </div>
+              <div class="p-2 w-100 text-center">
+                $230.00
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                Shipping
+              </div>
+              <div class="p-2 w-100 text-center">
+                $14.99
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                Tax
+              </div>
+              <div class="p-2 w-100 text-center">
+                $12.25
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <strong>Total</strong>
+              </div>
+              <div class="p-2 w-100 text-center">
+                <strong>$257.24</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <a onclick="placeOrder();" href="thank-you.html">
+          <button type="button" name="button" action="purchase" style="font-size:24px;">Place Your Order</button>
+        </a>
+
+      </div>
+    </div>
   </body>
 </html>
