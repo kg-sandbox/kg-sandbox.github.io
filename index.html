@@ -19,11 +19,15 @@
       }
     </script>
     <script type="text/javascript">
+      function checkCookie(name) {
+        var KG_Sandbox_ID_Response = getCookie(name);
+        document.getElementById("KG_Sandbox_ID_Field").innerHTML = KG_Sandbox_ID_Response;
+      }
+    </script>
+    <script type="text/javascript">
       function deleteCookie(name) {
         var cookieName = name;
-        var executionlog = "document.cookie = " + cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=.kg-sandbox.github.io;";
         document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=.kg-sandbox.github.io;";
-        console.log(executionlog);
       }
     </script>
   </head>
@@ -74,13 +78,12 @@
           <h3 id="KG_Sandbox_ID_Field"></h3>
           <script type="text/javascript">
             var KG_Sandbox_ID_Response = getCookie("KG_Sandbox_ID")
-            console.log(KG_Sandbox_ID_Response)
             document.getElementById("KG_Sandbox_ID_Field").innerHTML = KG_Sandbox_ID_Response;
           </script>
           <br>
           <div>We keep this cookie stored in your browser for 30 days, so if you come back from the same browser and haven't cleared your cookies, we'll keep using the same ID.</div>
           <br>
-          <div>If this is the first time you've visited, you're "undefined," but we just set a new cookie with a unique(ish) number in your browser's storage. If you refresh your page, or whenever you return for the next 30 days, you'll see your browser's identifier below.</div>
+          <div>If this is the first time you've visited, you're "undefined," but we just set a new cookie with a unique(ish) number in your browser's storage. If you refresh your page, or whenever you return for the next 30 days, you'll see your browser's identifier below. <a onclick="checkCookie('KG_Sandbox_ID')" href="#"><strong>Click here, or refresh the page to see what ID we've set.</strong></a></div>
           <br>
           <div>Cookies can be deleted. This happens automatically for some users if they prefer browsers that have these features, such as ITP in Safari, and ETP in Firefox. For other users, they may actually manually delete their cookies to increase their anonymity to the ad tech community. When they delete their cookies, the next time they visit a site, a new ID will be created. If you want to test this out, take note of the ID above, and then click the button below. When your page reloads, you'll now see your ID as undefined, and a new ID will be set and used for the rest of your browsing.</div>
           <br>
