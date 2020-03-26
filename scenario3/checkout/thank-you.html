@@ -7,6 +7,7 @@
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
         'event': 'orderConfirmation_tagSequencingExample',
+        'scenario': 'scenario3',
         'transactionId': '718324650103',
         'transactionTotal': 230,
         'transactionTax': 12.25,
@@ -57,8 +58,8 @@
         <a class="py-2" href="/" aria-label="Product">
           <img src="https://images.squarespace-cdn.com/content/5c6707ac65a707d158c990cb/1550256154686-DDAC1CW6MXR6GLREB3M8/keplerlogo.png?content-type=image%2Fpng" alt="" width="150px">
         </a>
-        <a class="py-2 d-none d-md-inline-block" href="/scenario1/products">Products</a>
-        <a class="py-2 d-none d-md-inline-block" href="/scenario1/confirmation/cart">Cart</a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario3/products">Products</a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario3/checkout/cart">Cart</a>
         <a class="py-2 d-none d-md-inline-block" href="/help/scenarios">Return to Scenarios</a>
       </div>
     </nav>
@@ -73,7 +74,7 @@
             <strong><div>Mug - Grey</div></strong>
             <div class="d-flex flex-row">
               <div class="p-2 w-100 text-center">
-                <img src="../img/12345-grey.jpg" alt="" height="100px">
+                <img src="/scenario3/img/12345-grey.jpg" alt="" height="100px">
               </div>
               <div class="p-2 w-100 text-center">
                 <div>Quantity: 3</div>
@@ -86,7 +87,7 @@
             <strong><div>Shirt - Sequin</div></strong>
             <div class="d-flex flex-row">
               <div class="p-2 w-100 text-center">
-                <img src="../img/67890-sequin.jpg" alt="" height="100px">
+                <img src="/scenario3/img/67890-sequin.jpg" alt="" height="100px">
               </div>
               <div class="p-2 w-100 text-center">
                 <div>Quantity: 4</div>
@@ -99,7 +100,7 @@
             <strong><div>Shirt - Tie Dye</div></strong>
             <div class="d-flex flex-row">
               <div class="p-2 w-100 text-center">
-                <img src="../img/67890-tiedye.jpg" alt="" height="100px">
+                <img src="/scenario3/img/67890-tiedye.jpg" alt="" height="100px">
               </div>
               <div class="p-2 w-100 text-center">
                 <div>Quantity: 3</div>
@@ -112,7 +113,7 @@
             <strong><div>Notebook - Blue</div></strong>
             <div class="d-flex flex-row">
               <div class="p-2 w-100 text-center">
-                <img src="../img/34567-blue.jpg" alt="" height="100px">
+                <img src="/scenario3/img/34567-blue.jpg" alt="" height="100px">
               </div>
               <div class="p-2 w-100 text-center">
                 <div>Quantity: 7</div>
@@ -179,7 +180,7 @@
           </div>
         </div>
         <br>
-        <a href="../../help/scenarios">
+        <a href="/help/scenarios">
           <button type="button" name="button" action="purchase" style="font-size:24px;">Go Back to the Scenarios page</button>
         </a>
 
@@ -191,6 +192,7 @@
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
         'event': 'orderConfirmation',
+        'scenario': 'scenario3',
         'transactionId': '718324650103',
         'transactionTotal': 230,
         'transactionTax': 12.25,

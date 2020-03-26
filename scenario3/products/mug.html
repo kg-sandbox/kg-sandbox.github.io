@@ -7,6 +7,7 @@
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
         'event': 'productView_tagSequencingExample',
+        'scenario': 'scenario3',
         'productId': '12345',
         'productMinimumPrice': 10,
         'productMaximumPrice': 16
@@ -26,6 +27,7 @@
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
           'event': 'addToCart',
+          'scenario': 'scenario3',
           'productSku': prod_sku,
           'productPrice': Number(prod_price)
         });
@@ -42,8 +44,8 @@
         <a class="py-2" href="/" aria-label="Product">
           <img src="https://images.squarespace-cdn.com/content/5c6707ac65a707d158c990cb/1550256154686-DDAC1CW6MXR6GLREB3M8/keplerlogo.png?content-type=image%2Fpng" alt="" width="150px">
         </a>
-        <a class="py-2 d-none d-md-inline-block" href="/scenario1/products">Products</a>
-        <a class="py-2 d-none d-md-inline-block" href="/scenario1/confirmation/cart">Cart</a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario3/products">Products</a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario3/checkout/cart">Cart</a>
         <a class="py-2 d-none d-md-inline-block" href="/help/scenarios">Return to Scenarios</a>
       </div>
     </nav>
@@ -52,7 +54,7 @@
     </div>
     <div class="d-flex flex-row">
       <div class="p-2 w-100 text-center">
-        <img src="../img/12345.jpg" alt="" width="100%">
+        <img src="/scenario3/img/12345.jpg" alt="" width="100%">
       </div>
       <div class="p-2 w-100 text-center">
         <h2>Product Information</h2>
@@ -76,7 +78,7 @@
         <button type="button" name="button" action="addtocart" prod_id="12345" prod_sku="12345-white" prod_price=10 onclick="addtocartalert(this.getAttribute('prod_id'), this.getAttribute('prod_sku'), this.getAttribute('prod_price'));">Add a White Mug to your cart</button>
         <br>
         <br>
-        <a href="../confirmation/cart">
+        <a href="/scenario3/checkout/cart">
           <button type="button" name="button" action="goToCart" style="font-size:24px;">View My Cart</button>
         </a>
       </div>
@@ -87,6 +89,7 @@
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
         'event': 'productView',
+        'scenario': 'scenario3',
         'productId': '12345',
         'productMinimumPrice': 10,
         'productMaximumPrice': 16

@@ -7,6 +7,7 @@
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
         'event': 'productView_tagSequencingExample',
+        'scenario': 'scenario3',
         'productId': '12345',
         'productMinimumPrice': 10,
         'productMaximumPrice': 16
@@ -26,6 +27,7 @@
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
           'event': 'addToCart',
+          'scenario': 'scenario3',
           'productSku': prod_sku,
           'productPrice': Number(prod_price)
         });
@@ -52,7 +54,7 @@
     </div>
     <div class="d-flex flex-row">
       <div class="p-2 w-100 text-center">
-        <img src="../img/67890.jpg" alt="" width="100%">
+        <img src="/scenario3/img/67890.jpg" alt="" width="100%">
       </div>
       <div class="p-2 w-100 text-center">
         <h2>Product Information</h2>
@@ -76,7 +78,7 @@
         <button type="button" name="button" action="addtocart" prod_id="67890" prod_sku="67890-tiedye" prod_price=26 onclick="addtocartalert(this.getAttribute('prod_id'), this.getAttribute('prod_sku'), this.getAttribute('prod_price'));">Add a Tie Dye Shirt to your cart</button>
         <br>
         <br>
-        <a href="../confirmation/cart">
+        <a href="/scenario3/checkout/cart">
           <button type="button" name="button" action="goToCart" style="font-size:24px;">View My Cart</button>
         </a>
       </div>
@@ -87,6 +89,7 @@
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
         'event': 'productView',
+        'scenario': 'scenario3',
         'productId': '12345',
         'productMinimumPrice': 10,
         'productMaximumPrice': 16
