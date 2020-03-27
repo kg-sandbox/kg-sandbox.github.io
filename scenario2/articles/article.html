@@ -2,27 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script>
-      function meterSet() {
-        function getCookie(name) {
-          var value = "; " + document.cookie;
-          var parts = value.split("; " + name + "=");
-          if (parts.length == 2) return parts.pop().split(";").shift();
-        }
-        var cookieName = "KG_Meter_Count";
-        var meter = getCookie(cookieName);
-        var date = 604800;
-        if (meter == undefined) {
-          var cookieValue = 1;
-          document.cookie = cookieName + "=" + cookieValue + "; Max-Age=" + date + "; path=/; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax"; // Sets cookie for all subdomains
-        } else {
-          var cookieValue = Number(meter) + 1;
-          document.cookie = cookieName + "=" + cookieValue + "; Max-Age=" + date + "; path=/; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax"; // Sets cookie for all subdomains
-        }
-      }
-      meterSet();
-    </script>
     <title>KG Sandbox | Scenario 2 | ARTICLE NAME</title>
+    <script src="/js/main.js"></script>
+    <script src="/scenario2/js/scenario2.js">meterSet("KG_Meter_Count",604800);</script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
