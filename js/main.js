@@ -7,7 +7,6 @@ function getCookie(name) {
 function databaseCookie(name, duration) {
   var cookieName = name;
   var cookieValue = getCookie(cookieName);
-  var cookieValue = undefined;
 
   if (cookieValue == undefined) {
     var hash = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
