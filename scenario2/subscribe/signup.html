@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>KG Sandbox | Scenario 3 | Cart</title>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        'event': 'viewCart_tagSequencingExample',
+        'scenario': 'scenario3',
+        'transactionId': '718324650103',
+        'transactionTotal': 230,
+        'transactionTax': 12.25,
+        'transactionShipping': 14.99,
+        'transactionProducts': [{
+          'sku': '12345-grey',
+          'name': 'Grey Mug',
+          'category': 'Home',
+          'price': 5,
+          'quantity': 3
+        },{
+          'sku': '67890-sequin',
+          'name': 'Sequin Shirt',
+          'category': 'Apparel',
+          'price': 29,
+          'quantity': 4
+        },{
+          'sku': '67890-tiedye',
+          'name': 'Tie Dye Shirt',
+          'category': 'Apparel',
+          'price': 26,
+          'quantity': 3
+        },{
+          'sku': '34567-blue',
+          'name': 'Blue Notebook',
+          'category': 'Office Supplies',
+          'price': 3,
+          'quantity': 7
+        }]
+      });
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TDG5G7J');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDG5G7J"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="site-header sticky-top py-1" style="background-color:#FFF;">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="/" aria-label="Product">
+          <img src="/img/keplerlogo.png" alt="" width="150px">
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario3/">Scenario 3 Homepage</a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario3/products">Products</a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario3/checkout/cart">Cart</a>
+        <a class="py-2 d-none d-md-inline-block" href="/help/scenarios">Return to Scenarios</a>
+      </div>
+    </nav>
+    <div class="p-2 w-100 text-center">
+      <h2>Here is your cart:</h2>
+      <div>(We didn't actually store what you added to your cart. Let's pretend this is what you did add...)</div>
+    </div>
+    <div class="d-flex flex-row">
+      <div class="p-2 w-100 text-center">
+        <div class="d-flex flex-column">
+          <h2>Your Products</h2>
+          <div class="p-2 w-100 text-center">
+            <strong><div>Mug - Grey</div></strong>
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <img src="../img/12345-grey.jpg" alt="" height="100px">
+              </div>
+              <div class="p-2 w-100 text-center">
+                <div>Quantity: 3</div>
+                <div>Price: $5.00</div>
+                <div>Subtotal: $15.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 w-100 text-center">
+            <strong><div>Shirt - Sequin</div></strong>
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <img src="../img/67890-sequin.jpg" alt="" height="100px">
+              </div>
+              <div class="p-2 w-100 text-center">
+                <div>Quantity: 4</div>
+                <div>Price: $29.00</div>
+                <div>Subtotal: $116.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 w-100 text-center">
+            <strong><div>Shirt - Tie Dye</div></strong>
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <img src="../img/67890-tiedye.jpg" alt="" height="100px">
+              </div>
+              <div class="p-2 w-100 text-center">
+                <div>Quantity: 3</div>
+                <div>Price: $26.00</div>
+                <div>Subtotal: $78.00</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-2 w-100 text-center">
+            <strong><div>Notebook - Blue</div></strong>
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <img src="../img/34567-blue.jpg" alt="" height="100px">
+              </div>
+              <div class="p-2 w-100 text-center">
+                <div>Quantity: 7</div>
+                <div>Price: $3.00</div>
+                <div>Subtotal: $21.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-2 w-100 text-center">
+        <h2>Checkout</h2>
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                Subtotal
+              </div>
+              <div class="p-2 w-100 text-center">
+                $230.00
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                Shipping
+              </div>
+              <div class="p-2 w-100 text-center">
+                $14.99
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                Tax
+              </div>
+              <div class="p-2 w-100 text-center">
+                $12.25
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="d-flex flex-column">
+          <div class="p-2 w-100 text-center">
+            <div class="d-flex flex-row">
+              <div class="p-2 w-100 text-center">
+                <strong>Total</strong>
+              </div>
+              <div class="p-2 w-100 text-center">
+                <strong>$257.24</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <a href="/scenario3/checkout/thank-you">
+          <button type="button" name="button" action="purchase" style="font-size:24px;">Place Your Order</button>
+        </a>
+
+      </div>
+    </div>
+  </body>
+  <footer>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        'event': 'viewCart',
+        'scenario': 'scenario3',
+        'transactionId': '718324650103',
+        'transactionTotal': 230,
+        'transactionTax': 12.25,
+        'transactionShipping': 14.99,
+        'transactionProducts': [{
+          'sku': '12345-grey',
+          'name': 'Grey Mug',
+          'category': 'Home',
+          'price': 5,
+          'quantity': 3
+        },{
+          'sku': '67890-sequin',
+          'name': 'Sequin Shirt',
+          'category': 'Apparel',
+          'price': 29,
+          'quantity': 4
+        },{
+          'sku': '67890-tiedye',
+          'name': 'Tie Dye Shirt',
+          'category': 'Apparel',
+          'price': 26,
+          'quantity': 3
+        },{
+          'sku': '34567-blue',
+          'name': 'Blue Notebook',
+          'category': 'Office Supplies',
+          'price': 3,
+          'quantity': 7
+        }]
+      });
+    </script>
+  </footer>
+</html>
