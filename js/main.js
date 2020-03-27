@@ -16,10 +16,10 @@ function databaseCookie(name, duration) {
   if (cookieValue == undefined) {
     var hash = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
     document.cookie = cookieName + "=" + hash + "; Max-Age=" + duration + "; path=/; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
-    console.log('New ' + name + 'cookie was set with the value ' + hash);
+    console.log('New ' + name + ' cookie was set with the value ' + hash);
   } else {
     document.cookie = cookieName + "=" + cookieValue + "; Max-Age=" + duration + "; path=/; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
-    console.log('Existing ' + name + 'cookie with the value ' + cookieValue + ' was extended for another 30 days')
+    console.log('Existing ' + name + ' cookie with the value ' + cookieValue + ' was extended for another 30 days')
   }
 }
 
