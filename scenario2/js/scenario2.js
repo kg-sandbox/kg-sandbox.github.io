@@ -4,6 +4,10 @@ function getCookie(name) {
   if (parts.length == 2) return parts.pop().split(";").shift();
 }
 
+function resetMeter(name) {
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=" + location.hostname.replace(/^www\./i, "" + ";path=/scenario2");
+}
+
 function meterSet(name,duration,max) {
   var cookieValue = getCookie(name);
   if (cookieValue == undefined) {
