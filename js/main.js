@@ -5,20 +5,17 @@ function getCookie(name) {
 }
 
 function deleteCookie(name) {
-  var cookieName = name;
-  document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=" + location.hostname.replace(/^www\./i, "");
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=" + location.hostname.replace(/^www\./i, "");
 }
 
 function databaseCookie(name, duration) {
-  var cookieName = name;
-  var cookieValue = getCookie(cookieName);
-
+  var cookieValue = getCookie(name);
   if (cookieValue == undefined) {
     var hash = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-    document.cookie = cookieName + "=" + hash + "; Max-Age=" + duration + "; path=/; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
+    document.cookie = name + "=" + hash + "; Max-Age=" + duration + "; path=/; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
     console.log('New ' + name + ' cookie was set with the value ' + hash);
   } else {
-    document.cookie = cookieName + "=" + cookieValue + "; Max-Age=" + duration + "; path=/; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
+    document.cookie = name + "=" + cookieValue + "; Max-Age=" + duration + "; path=/; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
     console.log('Existing ' + name + ' cookie with the value ' + cookieValue + ' was extended for another 30 days')
   }
 }

@@ -6,7 +6,7 @@ function getCookie(name) {
 
 function meterSet(name,duration) {
   var cookieValue = getCookie(name);
-  if (meter == undefined) {
+  if (cookieValue == undefined) {
     var cookieValue = 1;
     document.cookie = cookieName + "=" + cookieValue + "; Max-Age=" + duration + "; path=/scenario2; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
   } else {
