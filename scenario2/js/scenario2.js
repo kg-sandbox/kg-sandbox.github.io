@@ -10,7 +10,7 @@ function meterSet(name,duration) {
     var cookieValue = 1;
     document.cookie = name + "=" + cookieValue + "; Max-Age=" + duration + "; path=/scenario2; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
   } else {
-    var cookieValue = Number(meter) + 1;
+    var cookieValue = Number(cookieValue) + 1;
     document.cookie = name + "=" + cookieValue + "; Max-Age=" + duration + "; path=/scenario2; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
   }
 }
