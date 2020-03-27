@@ -12,25 +12,6 @@
     })(window,document,'script','dataLayer','GTM-TDG5G7J');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script type="text/javascript">
-      function getCookie(name) {
-        var value = "; " + document.cookie;
-        var parts = value.split("; " + name + "=");
-        if (parts.length == 2) return parts.pop().split(";").shift();
-      }
-    </script>
-    <script type="text/javascript">
-      function checkCookie(name) {
-        var KG_Sandbox_ID_Response = getCookie(name);
-        document.getElementById("KG_Sandbox_ID_Field").innerHTML = KG_Sandbox_ID_Response;
-      }
-    </script>
-    <script type="text/javascript">
-      function deleteCookie(name) {
-        var cookieName = name;
-        document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=.kg-sandbox.github.io;";
-      }
-    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -76,11 +57,10 @@
           <div>For your browser, we've assigned the ID:</div>
           <h3 id="KG_Sandbox_ID_Field"></h3>
           <script type="text/javascript">
-            var KG_Sandbox_ID_Response = getCookie("KG_Sandbox_ID")
-            document.getElementById("KG_Sandbox_ID_Field").innerHTML = KG_Sandbox_ID_Response;
+            document.getElementById("KG_Sandbox_ID_Field").innerHTML = getCookie("KG_Sandbox_ID");
           </script>
           <br>
-          <div>Each time a browser loads a page on this site, a script checks if there is a cookie. If this is the first time you've visited (or if you open this page in a new Incognito window), you'll see "undefined," above. Since you don't have a cookie set, we're creating a new cookie with a unique(ish) number in your browser's storage. If you refresh your page, or whenever you return for the next 30 days, you'll see your browser's identifier above. <a onclick="checkCookie('KG_Sandbox_ID')" href="#"><strong>Click here, or refresh the page to see what ID we've set.</strong></a> We keep this cookie stored in your browser for 30 days. With each subsequent page load, if the script sees that the "KG_Sandbox_ID" cookie already exists, instead of creating a new one, we'll just keep the same value and extend how long that cookie lives for another 30 days from the time that the page was loaded.</div>
+          <div>Each time a browser loads a page on this site, a script checks if there is a cookie. If this is the first time you've visited (or if you open this page in a new Incognito window), you didn't have a cookie already set, so we created a new cookie with a unique(ish) string of letters and numbers in your browser's storage. If you refresh your page, or whenever you return for the next 30 days, you'll see your browser's identifier above. We keep this cookie stored in your browser for 30 days. With each subsequent page load, if the script sees that the "KG_Sandbox_ID" cookie already exists, instead of creating a new one, we'll just keep the same value and extend how long that cookie lives for another 30 days from the time that the page was loaded.</div>
           <br>
           <div>Cookies can be deleted. This happens automatically for some users if they prefer browsers that have these features, such as ITP in Safari, and ETP in Firefox. For other users, they may actually manually delete their cookies to increase their anonymity to the ad tech community. When they delete their cookies, the next time they visit a site, a new ID will be created. If you want to test this out, take note of the ID above, and then click the button below. When your page reloads, you'll now see your ID as undefined, and a new ID will be set and used for the rest of your browsing. If we captured additional information about you like your email, we could build an "ID Graph" to stitch these IDs together. This is how ad tech vendors make use of first-party cookies.</div>
           <br>

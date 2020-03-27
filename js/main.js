@@ -4,6 +4,11 @@ function getCookie(name) {
   if (parts.length == 2) return parts.pop().split(";").shift();
 }
 
+function deleteCookie(name) {
+  var cookieName = name;
+  document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=" + location.hostname.replace(/^www\./i, "");
+}
+
 function databaseCookie(name, duration) {
   var cookieName = name;
   var cookieValue = getCookie(cookieName);
