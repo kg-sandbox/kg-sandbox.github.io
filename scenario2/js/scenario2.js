@@ -5,7 +5,7 @@ function getCookie(name) {
 }
 
 function resetMeter(name) {
-  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=" + location.hostname.replace(/^www\./i, "" + ";path=/scenario2");
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=" + location.hostname.replace(/^www\./i, "") + ";path=/scenario2";
 }
 
 function meterSet(name,duration,max) {
