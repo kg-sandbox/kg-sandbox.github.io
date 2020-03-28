@@ -20,9 +20,6 @@ function meterSet(name,duration,max) {
 }
 
 function modal() {
-  var content = '<div class="p-2 w-100 text-center"><div class="modal-content"><!--<span class="close">&times;</span>--><h2>Look\'s like you\'re loving our content...</h2><h3>You\'ve read all three of your free articles this week...</h3><br><h3>But......</h3><br><h3>You can unlock all of our content for just $7.99/week!</h3><br><h4><a href="">Click here to subscribe now!</a></h4><br><br><div id="reset-meter"><i><a onclick="resetMeter('KG_Meter_Count')" href="javascript:location.reload();">Click here to reset your meter for more testing.</a></i></div></div></div>';
-  document.getElementById("paywall").innerHTML = content;
-
   // Get the modal
   var modal = document.getElementById("paywall");
   // Get the <span> element that closes the modal
