@@ -26,9 +26,6 @@ function modal() {
   if (readCount >= 3) {
     modal.style.display = "block";
   }
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
   resetLink.onclick = function() {
     modal.style.display = "none";
   }
