@@ -20,30 +20,16 @@ function meterSet(name,duration,max) {
 }
 
 function modal() {
-  // Get the modal
   var modal = document.getElementById("paywall");
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
   var resetLink = document.getElementById("reset-meter");
-  //var readCount = 3;
   var readCount = Number(getCookie("KG_Meter_Count"));
   if (readCount >= 3) {
     modal.style.display = "block";
   }
-  // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
     modal.style.display = "none";
   }
-  // When the user clicks on <span> (x), close the modal
   resetLink.onclick = function() {
     modal.style.display = "none";
   }
-  // When the user clicks anywhere outside of the modal, close it
-  /*
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-  */
 }

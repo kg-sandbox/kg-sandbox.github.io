@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>KG Sandbox | Scenario 2 | ARTICLE NAME</title>
+    <title>KG Sandbox | Scenario 2 | 5 Things That Happened</title>
     <script src="/js/main.js"></script>
     <script src="/scenario2/js/scenario2.js"></script>
     <!--<script src="file:///C:/Users/PeterRice/Documents/buildingStuff/pixels-tagging/sandbox-site/kg-sandbox.github.io/scenario2/js/scenario2.js"></script>-->
@@ -23,13 +23,12 @@
       <div class="p-2 w-100 text-center">
         <div class="modal-content">
           <h2>Look's like you're loving our content...</h2>
+          <br>
           <h3>You've read all three of your free articles this week...</h3>
           <br>
-          <h3>But......</h3>
+          <h3>If you want to keep reading, you can unlock all of our content for just $7.99/week!</h3>
           <br>
-          <h3>You can unlock all of our content for just $7.99/week!</h3>
-          <br>
-          <h4><a href="">Click here to subscribe now!</a></h4>
+          <h4><a href="/scenario2/subscribe/signup">Click here to subscribe now!</a></h4>
           <br>
           <br>
           <div id="reset-meter"><i><a onclick="resetMeter('KG_Meter_Count')" href="javascript:location.reload();">Click here to reset your meter for more testing.</a></i></div>
@@ -38,6 +37,15 @@
     </div>
     <script>
       modal();
+    </script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        'event': 'articleView',
+        'title': '5 Things That Happened',
+        'section': 'News',
+        'meterCount': Number(getCookie('KG_Meter_Count'))
+      });
     </script>
   </head>
   <body>
@@ -61,9 +69,9 @@
     </div>
     <script>document.getElementById("article-count-ribbon-value").innerHTML = getCookie("KG_Meter_Count");</script>
     <div class="p-2 w-100 text-center">
-      <h1>Article Name</h1>
-      <h2>Subtitle</h2>
-      <div>By Line</div>
+      <h1>5 Things That Happened</h1>
+      <h2>A quick roundup of the most important news of the day.</h2>
+      <div>Ron Burgandy</div>
       <br>
       <img src=""/>
       <br>

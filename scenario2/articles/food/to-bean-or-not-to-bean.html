@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>KG Sandbox | Scenario 2 | To Bean, or Not to Bean</title>
+    <script src="/js/main.js"></script>
+    <script src="/scenario2/js/scenario2.js"></script>
+    <!--<script src="file:///C:/Users/PeterRice/Documents/buildingStuff/pixels-tagging/sandbox-site/kg-sandbox.github.io/scenario2/js/scenario2.js"></script>-->
+    <script>
+      meterSet("KG_Meter_Count",604800,3);
+    </script>
+    <link rel="stylesheet" href="/scenario2/css/modal.css">
+    <!--<link rel="stylesheet" href="file:///C:/Users/PeterRice/Documents/buildingStuff/pixels-tagging/sandbox-site/kg-sandbox.github.io/scenario2/css/modal.css">-->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TDG5G7J');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <div id="paywall" class="modal">
+      <div class="p-2 w-100 text-center">
+        <div class="modal-content">
+          <h2>Look's like you're loving our content...</h2>
+          <br>
+          <h3>You've read all three of your free articles this week...</h3>
+          <br>
+          <h3>If you want to keep reading, you can unlock all of our content for just $7.99/week!</h3>
+          <br>
+          <h4><a href="/scenario2/subscribe/signup">Click here to subscribe now!</a></h4>
+          <br>
+          <br>
+          <div id="reset-meter"><i><a onclick="resetMeter('KG_Meter_Count')" href="javascript:location.reload();">Click here to reset your meter for more testing.</a></i></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      modal();
+    </script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        'event': 'articleView',
+        'title': 'To Bean, or Not to Bean',
+        'section': 'Food',
+        'meterCount': Number(getCookie('KG_Meter_Count'))
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDG5G7J"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="site-header sticky-top py-1" style="background-color:#FFF;">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="/" aria-label="Product">
+          <img src="/img/keplerlogo.png" alt="" width="150px">
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario2/">Scenario 2 Homepage</a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario2/articles">Articles</a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario2/subscribe/signup">Subscribe Now</a>
+        <a class="py-2 d-none d-md-inline-block" href="/help/scenarios">Return to Scenarios</a>
+      </div>
+    </nav>
+    <div class="p-2 w-100 text-center" style="background-color:green;color:white">
+      You've read <span id="article-count-ribbon-value"></span> of 3 free articles this week. <u><a href="/scenario2/subscribe/signup" style="color:white">Subscribe now</a></u> to read more!   <i><u><a style="color:white" onclick="resetMeter('KG_Meter_Count')" href="javascript:location.reload();">Click here to reset your meter.</a></u></i>
+    </div>
+    <script>document.getElementById("article-count-ribbon-value").innerHTML = getCookie("KG_Meter_Count");</script>
+    <div class="p-2 w-100 text-center">
+      <h1>To Bean, or Not to Bean</h1>
+      <h2>An exploration of the greatest coffee shops in the world.</h2>
+      <div>By Arabica Steeply</div>
+      <br>
+      <img src=""/>
+      <br>
+      <div style="padding: 10%">
+        <div>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt.</div>
+        <br>
+        <div>Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh.</div>
+        <br>
+        <div>Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</div>
+        <br>
+        <div>Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta.</div>
+        <br>
+        <div>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada.</div>
+      </div>
+    </div>
+  </body>
+</html>
