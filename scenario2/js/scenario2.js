@@ -84,3 +84,17 @@ function setSubPrice() {
     finalCost.style.display = "block";
   }
 }
+
+function submitCookie(){
+  document.cookie = "KG_Subscription_Type=" + subType('subscription') + ";path=/scenario2; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
+}
+
+function setRibbon(){
+  var unsubRibbon = getElementById('unsub-ribbon');
+  var subRibbon = getElementById('sub-ribbon');
+  if (getCookie('KG_Subscription_Type') != undefined) {
+    subRibbon.style.display = "block";
+  } else {
+    unsubRibbon.style.display = "block";
+  }
+}

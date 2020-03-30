@@ -159,7 +159,7 @@
   </body>
   <footer>
     <script type="text/javascript">
-    if (getCookie('subscription_type') == 'print_dig') {
+      if (getCookie('KG_Subscription_Type') == 'print_dig') {
         var subCost = 149;
       } else {
         var subCost = 114;
@@ -169,7 +169,7 @@
         'event': 'subscriptionConfirmation',
         'scenario': 'scenario2',
         'subscriptionId': orderId(),
-        'subscriptionType': getCookie('subscription_type'),
+        'subscriptionType': getCookie('KG_Subscription_Type'),
         'subscriptionCost': subCost
       });
     </script>
