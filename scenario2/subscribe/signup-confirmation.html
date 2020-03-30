@@ -4,42 +4,6 @@
     <meta charset="utf-8">
     <title>KG Sandbox | Scenario 3 | Confirmation Page</title>
     <script src="/js/main.js"></script>
-    <script type="text/javascript">
-      window.dataLayer = window.dataLayer || [];
-      dataLayer.push({
-        'event': 'orderConfirmation_tagSequencingExample',
-        'scenario': 'scenario3',
-        'transactionId': '718324650103',
-        'transactionTotal': 230,
-        'transactionTax': 12.25,
-        'transactionShipping': 14.99,
-        'transactionProducts': [{
-          'sku': '12345-grey',
-          'name': 'Grey Mug',
-          'category': 'Home',
-          'price': 5,
-          'quantity': 3
-        },{
-          'sku': '67890-sequin',
-          'name': 'Sequin Shirt',
-          'category': 'Apparel',
-          'price': 29,
-          'quantity': 4
-        },{
-          'sku': '67890-tiedye',
-          'name': 'Tie Dye Shirt',
-          'category': 'Apparel',
-          'price': 26,
-          'quantity': 3
-        },{
-          'sku': '34567-blue',
-          'name': 'Blue Notebook',
-          'category': 'Office Supplies',
-          'price': 3,
-          'quantity': 7
-        }]
-      });
-    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -193,37 +157,16 @@
     <script type="text/javascript">
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
-        'event': 'orderConfirmation',
-        'scenario': 'scenario3',
-        'transactionId': '718324650103',
-        'transactionTotal': 230,
-        'transactionTax': 12.25,
-        'transactionShipping': 14.99,
-        'transactionProducts': [{
-          'sku': '12345-grey',
-          'name': 'Grey Mug',
-          'category': 'Home',
-          'price': 5,
-          'quantity': 3
-        },{
-          'sku': '67890-sequin',
-          'name': 'Sequin Shirt',
-          'category': 'Apparel',
-          'price': 29,
-          'quantity': 4
-        },{
-          'sku': '67890-tiedye',
-          'name': 'Tie Dye Shirt',
-          'category': 'Apparel',
-          'price': 26,
-          'quantity': 3
-        },{
-          'sku': '34567-blue',
-          'name': 'Blue Notebook',
-          'category': 'Office Supplies',
-          'price': 3,
-          'quantity': 7
-        }]
+        'event': 'subscriptionConfirmation',
+        'scenario': 'scenario2',
+        'subscriptionId': orderId();
+        'subscriptionType': getCookie('subscription_type'),
+        'subscriptionCost': if (getCookie('subscription_type') == 'print_dig') {
+          return 149;
+        } else {
+          return 114;
+        }
+        },
       });
     </script>
   </footer>

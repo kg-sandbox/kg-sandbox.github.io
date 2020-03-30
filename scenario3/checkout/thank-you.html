@@ -5,11 +5,12 @@
     <title>KG Sandbox | Scenario 3 | Confirmation Page</title>
     <script src="/js/main.js"></script>
     <script type="text/javascript">
+      var orderId = orderId();
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
-        'event': 'orderConfirmation_tagSequencingExample',
+        'event': 'signupConfirmation_tagSequencingExample',
         'scenario': 'scenario3',
-        'transactionId': '718324650103',
+        'transactionId': orderId,
         'transactionTotal': 230,
         'transactionTax': 12.25,
         'transactionShipping': 14.99,
@@ -195,7 +196,7 @@
       dataLayer.push({
         'event': 'orderConfirmation',
         'scenario': 'scenario3',
-        'transactionId': '718324650103',
+        'transactionId': orderId,
         'transactionTotal': 230,
         'transactionTax': 12.25,
         'transactionShipping': 14.99,

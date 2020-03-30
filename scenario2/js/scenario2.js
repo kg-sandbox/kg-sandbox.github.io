@@ -30,3 +30,57 @@ function modal() {
     modal.style.display = "none";
   }
 }
+
+function subType(form) {
+  var subType = document.getElementsByName(form);
+  for (i=0; i < subType.length; i++) {
+    if (subType[i].checked) {
+      return subType[i].value;
+      break;
+    }
+  }
+}
+
+
+function displayAddress() {
+  var subValue = subType('subscription');
+  var address = document.getElementById('form-section-address');
+
+  if (subValue == 'print_dig') {
+    address.style.display = "block";
+    document.getElementById('address1').required=true;
+    document.getElementById('city').required=true;
+    document.getElementById('state').required=true;
+    document.getElementById('zip').required=true;
+  } else {
+    address.style.display = "none";
+    document.getElementById('address1').required=false;
+    document.getElementById('city').required=false;
+    document.getElementById('state').required=false;
+    document.getElementById('zip').required=false;
+  }
+}
+
+function setSubPrice() {
+  var subValue = subType('subscription');
+  var cost = document.getElementById('type');
+  var cost = document.getElementById('cost');
+  var finalCost = document.getElementById('final-cost');
+  var finalCostTotal = document.getElementById('final-cost-total');
+  var finalCostMonthly = document.getElementById('final-cost-monthly');
+
+  var print_dig_cost = '149';
+  var dig_only_cost = '114';
+
+  if (subValue == 'print_dig') {
+    cost.value = print_dig_cost;
+    finalCostTotal.innerHTML = print_dig_cost;
+    finalCostMonthly.innerHTML = (Number(print_dig_cost)/12).toFixed(2).toString();
+    finalCost.style.display = "block";
+  } else {
+    cost.value = dig_only_cost;
+    finalCostTotal.innerHTML = dig_only_cost;
+    finalCostMonthly.innerHTML = (Number(dig_only_cost)/12).toFixed(2).toString();
+    finalCost.style.display = "block";
+  }
+}

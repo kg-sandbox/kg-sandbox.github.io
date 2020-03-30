@@ -21,3 +21,7 @@ function databaseCookie(name, duration) {
 }
 
 databaseCookie("KG_Sandbox_ID", 2592000);
+
+function orderId() {
+  return Math.round((Math.random()*10000000000));
+}
