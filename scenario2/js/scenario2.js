@@ -93,10 +93,8 @@ function setRibbon(){
   var unsubRibbon = document.getElementById('unsub-ribbon');
   var subRibbon = document.getElementById('sub-ribbon');
   if (getCookie('KG_Subscription_Type') != undefined) {
-    console.log("show sub ribbon");
-    //subRibbon.style.display = "block";
+    subRibbon.style.display = "block";
   } else {
-    console.log("show unsub ribbon");
-    //unsubRibbon.style.display = "block";
+    unsubRibbon.style.display = "block";
   }
 }
