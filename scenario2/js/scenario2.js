@@ -23,7 +23,7 @@ function modal() {
   var modal = document.getElementById("paywall");
   var resetLink = document.getElementById("reset-meter");
   var readCount = Number(getCookie("KG_Meter_Count"));
-  if (readCount > 3) {
+  if (readCount > 3 && getCookie('KG_Subscription_Type') == undefined) {
     modal.style.display = "block";
   }
   resetLink.onclick = function() {

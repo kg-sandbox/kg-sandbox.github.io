@@ -64,7 +64,7 @@
         <a class="py-2 d-none d-md-inline-block" href="/help/scenarios">Return to Scenarios</a>
       </div>
     </nav>
-    <div class="p-2 w-100 text-center" style="background-color:green;color:white">
+    <div id="unsub-ribbon" class="p-2 w-100 text-center" style="background-color:green;color:white">
       You've read <span id="article-count-ribbon-value"></span> of 3 free articles this week. <u><a href="/scenario2/subscribe/signup" style="color:white">Subscribe now</a></u> to read more!   <i><u><a style="color:white" onclick="resetMeter('KG_Meter_Count')" href="javascript:location.reload();">Click here to reset your meter.</a></u></i>
     </div>
     <script>
@@ -74,6 +74,10 @@
         document.getElementById("article-count-ribbon-value").innerHTML = getCookie("KG_Meter_Count");
       }
     </script>
+    <div id="sub-ribbon" class="p-2 w-100 text-center" style="background-color:green;color:white;display:none">
+      Thank you for subscribing! You can read all you want!&nbsp&nbsp&nbsp<i><u><a style="color:white" onclick="resetMeter('KG_Meter_Count');deleteCookie('KG_Subscription_Type')" href="javascript:location.reload();">Click here to "unsubscribe" and reset your meter.</a></u></i>
+    </div>
+    <script>setRibbon()</script>
     <div class="p-2 w-100 text-center">
       <h1>8 Things That Happened Earlier</h1>
       <h2>A longer roundup of more important things that happened less recently.</h2>
