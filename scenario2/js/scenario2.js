@@ -90,11 +90,13 @@ function submitCookie(){
 }
 
 function setRibbon(){
-  var unsubRibbon = getElementById('unsub-ribbon');
-  var subRibbon = getElementById('sub-ribbon');
+  var unsubRibbon = document.getElementById('unsub-ribbon');
+  var subRibbon = document.getElementById('sub-ribbon');
   if (getCookie('KG_Subscription_Type') != undefined) {
-    subRibbon.style.display = "block";
+    console.log("show sub ribbon");
+    //subRibbon.style.display = "block";
   } else {
-    unsubRibbon.style.display = "block";
+    console.log("show unsub ribbon");
+    //unsubRibbon.style.display = "block";
   }
 }
