@@ -33,11 +33,13 @@
       You've read <span id="article-count-ribbon-value"></span> of 3 free articles this week. <u><a href="/scenario2/subscribe/signup" style="color:white">Subscribe now</a></u> to read more!   <i><u><a style="color:white" onclick="resetMeter('KG_Meter_Count')" href="javascript:location.reload();">Click here to reset your meter.</a></u></i>
     </div>
     <script>
-      if (Number(getCookie("KG_Meter_Count")) > 3) {
+      if (getCookie("KG_Meter_Count") == undefined) {
+        document.getElementById("article-count-ribbon-value").innerHTML = 0;
+      } if else (Number(getCookie("KG_Meter_Count")) > 3) {
         document.getElementById("article-count-ribbon-value").innerHTML = 3;
       } else {
         document.getElementById("article-count-ribbon-value").innerHTML = getCookie("KG_Meter_Count");
-      }
+      } if
     </script>
     <div class="p-2 w-100 text-center">
       <h1>The Daily News Times</h1>
