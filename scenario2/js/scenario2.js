@@ -98,3 +98,7 @@ function setRibbon(){
     unsubRibbon.style.display = "block";
   }
 }
+
+function resetSub(name) {
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;domain=" + location.hostname.replace(/^www\./i, "") + ";path=/scenario2";
+}
