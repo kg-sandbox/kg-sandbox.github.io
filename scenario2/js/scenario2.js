@@ -86,7 +86,7 @@ function setSubPrice() {
 }
 
 function submitCookie(){
-  document.cookie = "KG_Subscription_Type=" + subType('subscription') + ";path=/scenario2; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
+  document.cookie = "KG_Subscription_Type=" + subType('subscription') + "; Max-Age=604800;path=/scenario2; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
 }
 
 function setRibbon(){
