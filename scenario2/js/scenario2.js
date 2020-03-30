@@ -13,7 +13,7 @@ function meterSet(name,duration,max) {
   if (cookieValue == undefined) {
     var cookieValue = 1;
     document.cookie = name + "=" + cookieValue + "; Max-Age=" + duration + "; path=/scenario2; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
-  } else if (Number(cookieValue) < max){
+  } else {
     var cookieValue = Number(cookieValue) + 1;
     document.cookie = name + "=" + cookieValue + "; Max-Age=" + duration + "; path=/scenario2; domain=." + location.hostname.replace(/^www\./i, "") + ";secure;samesite=lax";
   }
@@ -23,7 +23,7 @@ function modal() {
   var modal = document.getElementById("paywall");
   var resetLink = document.getElementById("reset-meter");
   var readCount = Number(getCookie("KG_Meter_Count"));
-  if (readCount >= 3) {
+  if (readCount > 3) {
     modal.style.display = "block";
   }
   resetLink.onclick = function() {
