@@ -156,18 +156,18 @@
   </body>
   <footer>
     <script type="text/javascript">
+    if (getCookie('subscription_type') == 'print_dig') {
+        var subCost = 149;
+      } else {
+        var subCost = 114;
+      }
       window.dataLayer = window.dataLayer || [];
       dataLayer.push({
         'event': 'subscriptionConfirmation',
         'scenario': 'scenario2',
-        'subscriptionId': orderId();
+        'subscriptionId': orderId(),
         'subscriptionType': getCookie('subscription_type'),
-        'subscriptionCost': if (getCookie('subscription_type') == 'print_dig') {
-          return 149;
-        } else {
-          return 114;
-        }
-        },
+        'subscriptionCost': subCost
       });
     </script>
   </footer>
