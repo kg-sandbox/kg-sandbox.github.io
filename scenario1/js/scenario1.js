@@ -5,11 +5,11 @@ function getCookie(name) {
 }
 
 function deleteSubmitCookie(name) {
-  document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/scenario2;domain=" + location.hostname.replace(/^www\./i, "");
+  document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/scenario1;domain=" + location.hostname.replace(/^www\./i, "");
 }
 
 function submitCookie() {
-  document.cookie = "KG_Submission_Status=true;path=/scenario2;domain=" + location.hostname.replace(/^www\./i, "");
+  document.cookie = "KG_Submission_Status=true;path=/scenario1;domain=" + location.hostname.replace(/^www\./i, "");
 }
 
 function displayConfirm() {
