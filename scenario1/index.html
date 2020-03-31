@@ -2,12 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script>
-      window.history.replaceState({}, document.title, document.location.pathname);
-    </script>
-    <title>KG Sandbox | Scenario 3 | Confirmation Page</title>
+    <title>KG Sandbox | Scenario 1 | Homepage</title>
     <script src="/js/main.js"></script>
-    <script src="/scenario2/js/scenario2.js"></script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -27,35 +23,27 @@
         <a class="py-2" href="/" aria-label="Product">
           <img src="/img/keplerlogo.png" alt="" width="150px">
         </a>
-        <a class="py-2 d-none d-md-inline-block" href="/scenario2/">Scenario 2 Homepage</a>
-        <a class="py-2 d-none d-md-inline-block" href="/scenario2/articles">Articles</a>
-        <a class="py-2 d-none d-md-inline-block" href="/scenario2/subscribe/signup">Subscribe Now</a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario1/">Scenario 3 Homepage</a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario1/homepage">Algae Group Home Page</a>
         <a class="py-2 d-none d-md-inline-block" href="/help/scenarios">Return to Scenarios</a>
       </div>
     </nav>
     <div class="p-2 w-100 text-center">
-      <div style="margin:10%">
-      <h1>Your subscription is confirmed. You can now read as much as you want!</h1>
+      <h1>Scenario 1</h1>
       <br>
-      <h3><a href="/scenario2/articles">Click here to return to the articles page.</a></h3>
-    </div>
+      <h2>This scenario exists primarily to provide an introduction and guided walkthrough of trafficking and pixel implementation.</h2>
+      <br>
+      <h3>Go to the Kepler Wiki to review guided walkthroughs.</h3>
+      <br>
+      <br>
+      <h2>Client Overview:</h2>
+      <br>
+      <div style="padding: 0px 100px">This client is an offline service provider. Because they don't sell anything online, their primary goal is to provide information to users, and to convince them to request more information, so that they can continue to sales process directly. This is commonly referred to as Lead Generation.</div>
+      <br>
+      <a href="/scenario1/homepage"><button type="button" name="button">Get Started on Scenario 1</button></a>
+      <br>
+      <br>
+      <div>To get out of this scenario, click the "Return to Scenarios" button in the menu at the top of the screen.</div>
     </div>
   </body>
-  <footer>
-    <script type="text/javascript">
-      if (getCookie('KG_Subscription_Type') == 'print_dig') {
-        var subCost = 149;
-      } else {
-        var subCost = 114;
-      }
-      window.dataLayer = window.dataLayer || [];
-      dataLayer.push({
-        'event': 'subscriptionConfirmation',
-        'scenario': 'scenario2',
-        'subscriptionId': orderId(),
-        'subscriptionType': getCookie('KG_Subscription_Type'),
-        'subscriptionCost': subCost
-      });
-    </script>
-  </footer>
 </html>

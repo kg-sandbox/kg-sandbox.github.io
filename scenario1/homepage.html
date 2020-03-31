@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script>
+      window.history.replaceState({}, document.title, document.location.pathname);
+    </script>
+    <title>KG Sandbox | Scenario 1 | Homepage</title>
+    <script src="/js/main.js"></script>
+    <script src="/scenario1/js/scenario1.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TDG5G7J');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDG5G7J"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="site-header sticky-top py-1" style="background-color:#FFF;">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="/" aria-label="Product">
+          <img src="/img/keplerlogo.png" alt="" width="150px">
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="/scenario1/">Scenario 3 Homepage</a>
+        <a class="py-2 d-none d-md-inline-block" href="/help/scenarios">Return to Scenarios</a>
+      </div>
+    </nav>
+    <div class="p-2 w-100 text-center">
+      <h2>Algae Group</h2>
+    </div>
+    <div class="d-flex flex-row">
+      <div class="p-2 w-100 text-center">
+      <!--Signup Options-->
+      </div>
+    </div>
+
+    <div class="d-flex flex-row">
+      <div class="p-2 w-100 text-center" style="margin:20px">
+        <h4>Algae Group provides training resources for those who are looking to learn, with modules focused on two primary areas:</h4>
+          <div class="d-flex flex-row" style="padding:25px">
+            <div class="p-2 w-100 text-center">
+              <h5>Ad Trafficking</h5>
+              <div>It all starts with an impression, but serving an ad is so much more than just hitting start. Audience brainstorming, message testing, conversion goal discussion... every ad is an opportunity to communicate with a prospective customer, so every ad has to be just right.</div>
+            </div>
+            <div class="p-2 w-100 text-center">
+              <h5>Pixel Implementation</h5>
+              <div>Who cares how many impressions you served if you're flying blind? Quality, comprehensive data capture provides the backbone for how we improve our programs over time. But... setting up a complete data architecture plan is more complicated than it might look if you want it to be stable, usable, and fast.</div>
+            </div>
+          </div>
+        <h5>Submit your information in the email form to the right, and we will contact you with more information.</h5>
+      </div>
+
+      <div class="p-2 w-50 text-center">
+        <h3>Get More Information</h3>
+        <div style="margin:20px">
+          <form action="" method="get" style="width:100%;">
+            <div id="form-field-email" style="width:100%;display:flex;margin-bottom:5px">
+              <label id="form-field-email-label" for="email" style="min-width:45px;margin-right:10px">Email<span style="color:red">*</span></label>
+              <input id="form-field-email-input" type="text" name="email" style="width:100%;flex-grow:1" required>
+            </div>
+            <input onclick="submitCookie()" style="margin-top:15px" type="submit" value="Complete Subscription">
+          </form>
+        </div>
+        <div id="submit-confirm" style="margin:40px;color:red;display:none">
+          <i>Thank you for submitting your info! Someone will be in contact soon!</i>
+        </div>
+        <script>
+          displayConfirm();
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
