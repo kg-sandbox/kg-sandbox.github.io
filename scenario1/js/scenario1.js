@@ -17,5 +17,10 @@ function displayConfirm() {
     var submitConfirm = document.getElementById('submit-confirm');
     submitConfirm.style.display = "block";
     deleteSubmitCookie('KG_Submission_Status');
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      'event': 'requestInfo',
+      'scenario': 'scenario1'
+    });
   };
 }
