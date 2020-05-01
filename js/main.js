@@ -20,8 +20,21 @@ function databaseCookie(name, duration) {
   }
 }
 
-databaseCookie("KG_Sandbox_ID", 2592000);
+//databaseCookie("KG_Sandbox_ID", 2592000);
 
 function orderId() {
   return Math.round((Math.random()*10000000000));
+}
+
+function kgLog(event) {
+  var scriptId = 'AKfycbznKH4DhQyRy4Uv1Dmcj6N9LkJokfdDQcHqmIIiaNyu4wQDTwTV'
+  var baseUrl = 'https://script.google.com/macros/s/' + scriptId + '/exec?'
+  var userId = 'UserId=' + getCookie('KG_Sandbox_ID');
+  var hostname = 'Domain=' + window.location.hostname;
+  var path = 'Path=' + window.location.pathname;
+  var referrer = 'Referrer=' + document.referrer;
+  var action = 'Action=' + event;
+  var params = [userId,hostname,path,referrer,action];
+  var fullUrl = baseUrl + params.join('&')
+  fetch(fullUrl)
 }
