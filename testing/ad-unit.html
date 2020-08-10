@@ -5,8 +5,74 @@
     <title>KG Sandbox | Testing</title>
     <script src="/js/main.js"></script>
     <script>kgLog('PageView')</script>
+    <script>
+      // Copyright (c) 2017, 2020, Method Media Intelligence, Inc. and/or its affiliates.  All rights reserved.
+      // Patent US20190014019A1. https://patents.google.com/patent/US20190014019A1
+      window.onload = function(){
+         (function(){
+      var ggl;
+      var execFn = function() {
+          function getParameterByName(name, url) {
+              try {
+                  if (!url) url = window.location.href;
+                  name = name.replace(/[\[\]]/g, '\\$&');
+                  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                      results = regex.exec(url);
+                  if (!results) return null;
+                  if (!results[2]) return '';
+                  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+              } catch(e) {
+                  return null
+              }
+          };
+          var execBeacon = function(){
+              var img = new Image();
+              img.width = 1;
+              img.height = 1;
+              var proto;
+              if (document.location.protocol.indexOf('http') > -1) {
+                  proto = document.location.protocol;
+              } else {
+                  proto = 'https:'
+              }
+              var auc = new Date().getTime()
+              var domain;
+              var ref = getParameterByName('utm_source');;
+              var gclid = getParameterByName('gclid');
+              if (document.referrer && document.referrer.length > 0) {
+                  var pathArray = document.referrer.split( '/' );
+                  var protocol = pathArray[0];
+                  var host = pathArray[2];
+                  domain = protocol + '//' + host;
+              }
+              var href;
+              if (location.href && location.href.length > 0) {
+                  href = location.href.split(/[?#]/)[0];
+              }
+              img.src = proto + '//go.bidsimulator.com/ping?acct=Kepg-POC&ddio='+window.location.origin + '&rdr='+ggl+'&hx_dsig_cc='+gclid+'&id_auc='+auc+'&sour='+domain+'&eox='+href+'&wop='+ref;
+          };
+          keyl_qwsiio = function(){
+              ggl = 'none';
+              execBeacon();
+              window.mmi_iv_traffic_var = true;
+          };
+          keyl_fiomm = function(rdr){
+              ggl = rdr;
+              execBeacon();
+              if (ggl == "Google SwiftShader") {
+                  window.mmi_iv_traffic_var = true;
+              } else {
+                  window.mmi_iv_traffic_var = false;
+              }
+          };
+          eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('0.2=0[\'4\'];0.1=0[\'8\'];3="6";2(1(3+"5+7=="));',9,9,'window|qaae|kiiw|woai|eval|wpjYW52YXMud2lkdGggID0gMTsKY2FudmFzLmhlaWdodCA9IDE7CmRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoY2FudmFzKTsKY2FudmFzLnN0eWxlLmRpc3BsYXk9J25vbmUnOwp2YXIgd2ViZ2xWZXJzaW9uID0gd2luZG93LmxvY2F0aW9uLnNlYXJjaC5pbmRleE9mKCd2PTInKSA|dmFyIGNhbnZhcyA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2NhbnZhcycpO|IDAgPyAyIDogMTsKdmFyIGdsOwp2YXIgcG9zc2libGVOYW1lcyA9ICh3ZWJnbFZlcnNpb24gPT09IDIpID8gWyd3ZWJnbDInLCAnZXhwZXJpbWVudGFsLXdlYmdsMiddIDogWyd3ZWJnbCcsICdleHBlcmltZW50YWwtd2ViZ2wnXTsKdmFyIGdldFVubWFza2VkSW5mbzsKdmFyIGNvbnRleHROYW1lOwp3aW5kb3cuX2t5Zm4gPSBmYWxzZTsKaWYgKHR5cGVvZiBjYW52YXMgIT0gJ3VuZGVmaW5lZCcpIHsKCQoJZ2wgPSBjYW52YXMuZ2V0Q29udGV4dCgnd2ViZ2wnLCB7IHN0ZW5jaWwgOiB0cnVlIH0pIHx8IGNhbnZhcy5nZXRDb250ZXh0KCdleHBlcmltZW50YWwtd2ViZ2wnLCB7IHN0ZW5jaWwgOiB0cnVlIH0pOwoJZ2V0VW5tYXNrZWRJbmZvID0gZnVuY3Rpb24oZ2wpIHsKCQl0cnkgewoKCQkJdmFyIHVuTWFza2VkSW5mbyA9IHsKCQkgICAgICAgIHJlbmRlcmVyOiBmYWxzZSwKCQkgICAgICAgIHZlbmRvcjogZmFsc2UKCQkgICAgfTsKCQkgICAgdmFyIGRiZ1JlbmRlckluZm8gPSBnbC5nZXRFeHRlbnNpb24oIldFQkdMX2RlYnVnX3JlbmRlcmVyX2luZm8iKTsKCQkgICAgaWYgKGRiZ1JlbmRlckluZm8gIT0gbnVsbCAmJiBnbC5nZXRFeHRlbnNpb24udG9TdHJpbmcoKS5pbmRleE9mKCdbbmF0aXZlIGNvZGVdJykgPiAtMSAmJiBnbC5nZXRQYXJhbWV0ZXIudG9TdHJpbmcoKS5pbmRleE9mKCdbbmF0aXZlIGNvZGVdJykgPiAtMSkgewoJCSAgICAgICAgdW5NYXNrZWRJbmZvLnJlbmRlcmVyID0gZ2wuZ2V0UGFyYW1ldGVyKGRiZ1JlbmRlckluZm8uVU5NQVNLRURfUkVOREVSRVJfV0VCR0wpOwoJCSAgICAgICAgdW5NYXNrZWRJbmZvLnZlbmRvciAgID0gZ2wuZ2V0UGFyYW1ldGVyKGRiZ1JlbmRlckluZm8uVU5NQVNLRURfVkVORE9SX1dFQkdMKTsKCQkgICAgfQoJCSAgICAKCQkgICAgcmV0dXJuIHVuTWFza2VkSW5mbzsKCQl9IGNhdGNoKGUpewoJCQlrZXlsX3F3c2lpbygpOwoJCX0KCX0gIAp9IGVsc2UgewoJIGtleWxfcXdzaWlvKCk7CgkgZ2wgPSBmYWxzZTsKCSBnZXRVbm1hc2tlZEluZm8gPSBmdW5jdGlvbigpewoJIAlyZXR1cm4ge3JlbmRlcmVyOmZhbHNlfTsKCSB9Cn0KCndpbmRvdy5fa3lmbiA9IGdldFVubWFza2VkSW5mbyhnbCk7CmlmICh3aW5kb3cuX2t5Zm4ucmVuZGVyZXIgJiYgd2luZG93Ll9reWZuLnZlbmRvciAmJiB3aW5kb3cuX2t5Zm4ucmVuZGVyZXIubGVuZ3RoID4gMCkgewoJa2V5bF9maW9tbSh3aW5kb3cuX2t5Zm4ucmVuZGVyZXIpOwp9IGVsc2UgewoJa2V5bF9xd3NpaW8oKTsKfQoKdmFyIGVsZW1lbnQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiX2tleWxfaW1nX2tleWwiKTsKaWYgKGVsZW1lbnQpIHsKCWVsZW1lbnQucGFyZW50Tm9kZS5yZW1vdmVDaGlsZChlbGVtZW50KTsKfQ|atob'.split('|'),0,{}))
+      };
+      execFn();
+      })();
+      }
+      </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://files.bidsimulator.com/mmi-zip.js?dealId=KepG-POC&impId=none&hx_dsig_cc=direct&exid=none&pubid=none"></script>
+    <!--<script src="https://files.bidsimulator.com/mmi-zip.js?dealId=KepG-POC&impId=none&hx_dsig_cc=direct&exid=none&pubid=none"></script>-->
   </head>
   <body>
     <nav class="site-header sticky-top py-1" style="background-color:#FFF;">
