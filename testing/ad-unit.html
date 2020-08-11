@@ -3,8 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>KG Sandbox | Testing</title>
-    <script src="/js/main.js"></script>
-    <script>kgLog('PageView')</script>
+    <!--<script src="/js/main.js"></script>
+    <script>kgLog('PageView')</script>-->
+    <script src="/js/events.js">
+      kgl('PageView', {
+        value: 123,
+        sku: 'ABC123'
+      })
+    </script>
     <script>
       // Copyright (c) 2017, 2020, Method Media Intelligence, Inc. and/or its affiliates.  All rights reserved.
       // Patent US20190014019A1. https://patents.google.com/patent/US20190014019A1
