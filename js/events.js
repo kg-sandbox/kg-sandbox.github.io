@@ -18,7 +18,7 @@ function serialize(obj) {
   var qps = [];
   for (var p in obj)
     if (obj.hasOwnProperty(p)) {
-      qps.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+      qps.push('[cd]' + encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
     }
   return qps.join("&");
 }
