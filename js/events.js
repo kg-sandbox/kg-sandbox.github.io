@@ -44,7 +44,7 @@ function kgl(i,e,p) {
 
 function dev_kgl(i,e,p) {
   databaseCookie('_kglid');
-  let scriptId = 'AKfycbznKH4DhQyRy4Uv1Dmcj6N9LkJokfdDQcHqmIIiaNyu4wQDTwTV';
+  let scriptId = 'AKfycbwDoz_fGDxE8WDcy5cI8iSrOdE3rnAJKO8r6zcmRM6ZzOtTAAI';
   let baseUrl = 'https://script.google.com/macros/s/' + scriptId + '/exec?';
   let logId = 'LogId=' + i;
   let userId = 'UserId=' + getCookie('_kglid');
