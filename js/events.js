@@ -32,7 +32,7 @@ function kgl(e,p) {
   let path = 'Path=' + window.location.pathname;
   let referrer = 'Referrer=' + document.referrer;
   let action = 'Action=' + e;
-  var values = [logId,userId,hostname,path,referrer,action,serialize(p)];
+  var values = [userId,hostname,path,referrer,action,serialize(p)];
   var fullUrl = baseUrl + values.filter(Boolean).join('&');
   fetch(fullUrl)
 }
