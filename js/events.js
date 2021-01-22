@@ -27,7 +27,7 @@ function kgl(e,p) {
   eventsDatabaseCookie('_kglid');
   let scriptId = 'AKfycbznKH4DhQyRy4Uv1Dmcj6N9LkJokfdDQcHqmIIiaNyu4wQDTwTV';
   let baseUrl = 'https://script.google.com/macros/s/' + scriptId + '/exec?';
-  let userId = 'UserId=' + getEventsCookie('_kglid');
+  let userId = 'UserId=' + getEventsCookie('KG_Sandbox_ID');
   let hostname = 'Domain=' + window.location.hostname;
   let path = 'Path=' + window.location.pathname;
   let referrer = 'Referrer=' + document.referrer;
